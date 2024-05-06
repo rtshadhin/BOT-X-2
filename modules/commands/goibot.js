@@ -17,7 +17,7 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
   var id = event.senderID;
   var name = await Users.getNameUser(event.senderID);
 
-  var tl= ["ཫ༄𒁍≛⃝এতো বট বট বলো কেন-!!😒","ཫ༄𒁍≛⃝না তো এতো বট বট বলে ভালো লাগো-!!😩"];
+  var tl= ["এতো বট বট বলো কেন-!!😒","না তো এতো বট বট বলে ভালো লাগো-!!😩"];
   var rand = tl[Math.floor(Math.random() * tl.length)]
 
   if ((event.body.toLowerCase() == "owner") || (event.body.toLowerCase() == "owner k")) {
@@ -76,11 +76,11 @@ if ((event.body.toLowerCase() == " bot love you") || (event.body.toLowerCase() =
    };
    
    if ((event.body.toLowerCase() == "bot kar") || (event.body.toLowerCase() == "bot kar ata")) {
-     return api.sendMessage("আয়ান বস আমাকে বানাইছে-!!👀", threadID, messageID);
+     return api.sendMessage("RAIHAN বস আমাকে বানাইছে-!!👀", threadID, messageID);
       };
   if (event.body.indexOf("bot") == 0 || (event.body.indexOf("Bot") == 0)) {
     var msg = {
-      body: `꧌꧍᪥${name}᪥꧌꧍\n━━━━━━━━━━━━━━━━\nআমি একটা ভালো মানুষ কোনো বট না-!!😑\n━━━━━━━━━━━━━━━━`
+      body: `꧌꧍᪥${name}᪥꧌꧍\n━━━━━━━━━━━━━━━━\n আমি রায়হান বসের আত্তা-!!😑\n━━━━━━━━━━━━━━━━`
     }
     return api.sendMessage(msg, threadID, messageID);
   };
