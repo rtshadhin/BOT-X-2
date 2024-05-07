@@ -31,7 +31,7 @@ module.exports.run = async function({ api, event }) {
 	if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) {
 		api.changeNickname(`{ ${global.config.PREFIX} } × ${(!global.config.BOTNAME) ? "bot" : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
 		const fs = require("fs");
-		return api.sendMessage("চলে এসেছি আমি » 𒄬 𓆩⃝𝗦𝗔𝗜𝗞𝗢𓆪᭄𝗥𝗔𝗜𝗛𝗔𝗡𓆩⁽๏̬̬̬̬̽̽̈⁾𓆪』 বট🥀🤖", event.threadID, () => api.sendMessage({body:`আসসালামুআলাইকুম 💖
+		return api.sendMessage("চলে আইছি 😁", event.threadID, () => api.sendMessage({body:`আসসালামুআলাইকুম 💖
 
 ◆━━━━━━━━━━━━━◆
   
@@ -42,9 +42,9 @@ module.exports.run = async function({ api, event }) {
 
 ◑মেম্বারদের কমান্ড সব আমার পক্ষে পালনকরা সম্ভব না 😔
 
-◑আমার বস রায়হান কে এড দিতে প্রথমে টাইপ করুন /add তারপর একটা স্পেস দিয়ে বস এর আইডির লিংক দিন ☺️
+◑আমার বস কে এড দিতে প্রথমে টাইপ করুন /add তারপর একটা স্পেস দিয়ে বস এর আইডির লিংক দিন ☺️
 
-◑বস এর আইডি লিংক ☞ https://www.facebook.com/profile.php?id=100078140734060
+◑বস এর আইডি লিংক ☞https://www.facebook.com/linkcopymarao
 
 USE HELP TO SEE COMMAND 
 \n\nUse ${global.config.PREFIX}help to see commands.\n\nexample :\n${global.config.PREFIX}hadis (text)\n${global.config.PREFIX}neymar (photo)\n${global.config.PREFIX}help (comman)\n${global.config.PREFIX}info 
@@ -69,7 +69,7 @@ USE HELP TO SEE COMMAND
 			}
 			memLength.sort((a, b) => a - b);
 			
-			(typeof threadData.customJoin == "undefined") ? msg = "╔════•|      ✿      |•════╗\n 💐আ্ঁস্ঁসা্ঁলা্ঁমু্ঁ💚আ্ঁলা্ঁই্ঁকু্ঁম্ঁ💐\n╚════•|      ✿      |•════╝\n\n    ✨𝗪𝗘𝗟𝗟𝗖𝗢𝗠𝗘✨\n\n                  ❥𝗡𝗘𝗪~\n\n                     ~𝗠𝗘𝗠𝗕𝗘𝗥~\n\n             [   {name} ]\n\n༄✺আ্ঁপ্ঁনা্ঁকে্ঁ আ্ঁমা্ঁদে্ঁর্ঁ✺࿐\n\n{threadName}\n\n 🥰🖤🌸—এ্ঁর্ঁ প্ঁক্ষ্ঁ🍀থে্ঁকে্ঁ🍀—🌸🥀\n\n         🥀_ভা্ঁলো্ঁবা্ঁসা্ঁ_অ্ঁভি্ঁরা্ঁম্ঁ_🥀\n\n༄✺আঁপঁনিঁ এঁইঁ গ্রুঁপেঁর {soThanhVien} নঁং মে্ঁম্বা্ঁরঁ ࿐\n\n    ╔╦══•    •✠•❀•✠ •   •══╦╗\n        ♥  𝗕𝗢𝗧'𝘀 𝗢𝗪𝗡𝗘𝗥♥\n\n                           ☟                     \n\n      ♥𝗦𝗔𝗜𝗞𝗢 𝗥𝗔𝗜𝗛𝗔𝗡(✷‿✷)♥\n    ╚╩══•    •✠•❀•✠ •    •══╩╝" : msg = threadData.customJoin;
+			(typeof threadData.customJoin == "undefined") ? msg = "WELCOME BOT-SADU" : msg = threadData.customJoin;
 			msg = msg
 			.replace(/\{name}/g, nameArray.join(', '))
 			.replace(/\{type}/g, (memLength.length > 1) ?  'You' : 'Friend')
